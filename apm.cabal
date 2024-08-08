@@ -1,0 +1,28 @@
+cabal-version:   3.0
+name:            apm
+version:         0.1.0.0
+license:         NONE
+author:          amhsm6@gmail.com
+maintainer:      amhsm6
+build-type:      Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable apm
+    import:           warnings
+
+    main-is:          Main.hs
+
+    other-modules:    Tree
+
+    build-depends:    base ^>=4.18.2.1
+                    , mtl
+                    , lens
+                    , filepath
+                    , directory
+                    , optparse-applicative
+
+    hs-source-dirs:   app
+
+    default-language: Haskell2010
